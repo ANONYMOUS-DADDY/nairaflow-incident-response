@@ -1,18 +1,14 @@
 # 🛡️ Project NairaFlow: Incident Response & Digital Forensics Capstone
 
-An enterprise-grade Incident Response and Forensic Investigation report detailing a multi-stage data breach at NairaFlow Technologies, handled in accordance with **NIST SP 800-61 Rev. 2** guidelines.
+This repository contains the official executive submission for the NairaFlow Technologies multi-stage incident response and forensics analysis.
 
-## 📊 Incident Response Metrics
-| Metric | Target | Actual Achieved | Status |
-| :--- | :--- | :--- | :--- |
-| **Mean Time to Containment (MTTC)** | < 4 Hours | **3 Hours, 42 Minutes** | 🟢 Target Met |
-| **Core Gateway Uptime** | > 99.9% | **99.94%** | 🟢 Target Met |
-| **Volatile Memory Preservation** | 100% | **100% (No Hard Reboots)** | 🟢 Target Met |
-| **Communication Integrity** | Out-of-Band | **100% Signal Deployment** | 🟢 Target Met |
+## 📋 Submission Document
+The complete, publication-ready grading rubric, operational KPIs, and architectural playbooks have been compiled into a high-fidelity PDF report to satisfy all compliance presentation standards.
 
-## 🏗️ Repository Architecture
-* `docs/incident_response_plan.md` - Standard Operating Procedures aligned with NIST.
-* `docs/forensic_report.md` - Analysis of compromised IAM entities, timelines, and chains of custody.
-* `docs/remediation_roadmap.md` - Short-term hardening and long-term architectural fixes (PCI-DSS v4.0).
-* `playbooks/` - Automation scripts for containing credentials and capturing live forensics.
-* `logs/` - Mock AWS CloudTrail indicators of compromise (IoCs).
+👉 **[Download the Official PDF Report Here](./NairaFlow_Incident_Response_Report.pdf)** 👈
+
+## 📊 Core Performance Summary
+* **Mean Time to Containment (MTTC):** 3 Hours, 42 Minutes (Target: < 4.0 Hours)
+* **Core Gateway Production Uptime:** 99.94% (Target: ≥ 99.9%)
+* **Volatile Memory Preservation:** 100% Intact (Live EBS Snapshots, No Hard Reboots)
+* **Framework Alignment:** NIST SP 800-61 Rev. 2 & PCI-DSS v4.0 Compliance

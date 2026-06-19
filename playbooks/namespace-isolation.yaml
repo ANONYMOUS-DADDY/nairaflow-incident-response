@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-staging-to-production
+  namespace: production
+spec:
+  podSelector: {} # Empty selector selects all pods in the production namespace
+  policyTypes:
+  - Ingress
+  ingress:
+  # Allow traffic from within the production namespace itself
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          kubernetes.io/metadata.name: production
+  # Explicitly isolate by NOT listing staging here. 
+  # To allow legitimate public traffic to the payment gateway pod specifically:
+  - from:
+    - ipBlock:
+        cidr: 0.0.0.0/0
+        except:
+        - 10.0.0.0/16 # Block the entire Staging VPC CIDR block range if applicable
+    ports:
+    - protocol: TCP
+      port: 443

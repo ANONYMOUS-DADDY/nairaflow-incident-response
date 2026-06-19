@@ -1,0 +1,43 @@
+{
+  "eventVersion": "1.08",
+  "userIdentity": {
+    "type": "IAMUser",
+    "principalId": "AIDAJQAB2M4FXXXXXXXXX",
+    "arn": "arn:aws:iam::123456789012:user/nairaflow-dev-staging",
+    "accountId": "123456789012",
+    "accessKeyId": "AKIAIOSFODNN7EXAMPLE",
+    "userName": "nairaflow-dev-staging"
+  },
+  "eventTime": "2026-06-16T03:14:22Z",
+  "eventSource": "sts.amazonaws.com",
+  "eventName": "AssumeRole",
+  "awsRegion": "eu-west-1",
+  "sourceIPAddress": "10.0.45.12",
+  "userAgent": "aws-cli/2.15.0 Python/3.11.6 Linux/6.1-amd64 botocore/2.4.5",
+  "requestParameters": {
+    "roleArn": "arn:aws:iam::123456789012:role/NairaFlow-Prod-RDS-FullAccess",
+    "roleSessionName": "exfiltrator-session"
+  },
+  "responseElements": {
+    "credentials": {
+      "accessKeyId": "ASIAI44QHXI7XXXXXXXX",
+      "expiration": "2026-06-16T04:14:22Z",
+      "sessionToken": "IQoJb3JpZ2luX2VjEAL//////////wEaDGV1LXdlc3QtMS..."
+    },
+    "assumedRoleUser": {
+      "assumedRoleId": "AROAID84GHIJXXXXXXXXX:exfiltrator-session",
+      "arn": "arn:aws:sts::123456789012:assumed-role/NairaFlow-Prod-RDS-FullAccess/exfiltrator-session"
+    }
+  },
+  "resources": [
+    {
+      "ARN": "arn:aws:iam::123456789012:role/NairaFlow-Prod-RDS-FullAccess",
+      "accountId": "123456789012",
+      "type": "AWS::IAM::Role"
+    }
+  ],
+  "eventType": "AwsApiCall",
+  "managementEvent": true,
+  "recipientAccountId": "123456789012",
+  "eventCategory": "Management"
+}
